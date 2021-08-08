@@ -12,7 +12,7 @@ import './MainDash.css'
 
 
 function MainDash(props) {
-    //const [isLoggedIn, setIsLoggedIn] = useState(false)
+    
     return props.isLoggedIn ? (
         <div className="App">
         <Topbar />
@@ -21,7 +21,7 @@ function MainDash(props) {
           <div className="others">
             <div className="others-wrapper">
                 <Switch>
-                  <Route path="/dash/home" component={HomePage} exact />
+                  <Route path="/dash" component={HomePage} exact />
                   <Route path="/dash/announcements" component={Announcement} exact />
                   <Route path="/dash/bankenergi" component={BankEnergi} exact />
                   <Route path="/dash/ai_model" component={AiModel} exact />
@@ -31,7 +31,7 @@ function MainDash(props) {
           </div>
          </div>
       </div>
-    ) : (<Redirect to="/" />)
+    ) : (<Redirect to="/" exact/>)
     
   }
   

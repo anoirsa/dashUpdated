@@ -94,8 +94,8 @@ body{
 	margin-top: 10px;
 }
 
-.login input[type=button]{
-	width: 260px;
+.sumbit--button {
+	width: 250px;
 	height: 35px;
 	background: #fff;
 	border: 1px solid #fff;
