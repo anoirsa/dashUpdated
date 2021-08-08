@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    padding: 5px;
+    
+  }
+  
+  .others {
+    flex : 4;
+    height: 100%;
+    padding: 0px 10px;
+    
+    
+    
+    
+  }
+  .others-wrapper {
+    height : calc(100vh - 60px);
+    width : 100%;
+    background:url('https://images.unsplash.com/photo-1500368701200-4db339a7f39b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size : cover;
+    border-radius: 5px;
+    border-top: 1.5px solid black;
+    border-left: 1.5px solid black;
+    border-right: 1.5px solid black;
+    
+    
+    
+  }
