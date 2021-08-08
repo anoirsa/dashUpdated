@@ -1,0 +1,15 @@
+.main--user--container {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main--user--container--wrapper {
+     background: rgba(250, 250, 250, 0.85);
+     width: 90%;
+     padding: 30px;
+     border-radius:5px;
+}

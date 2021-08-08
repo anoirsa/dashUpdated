@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 function Elexon({ dataGiven, graphId, datakeyOne, dataKeyOneX, datakeyTwo, }) {
   const style = { width: "85%", height: "70%" }
+  const fontColor = "#fff"
   switch (graphId) {
     case 0:
       return (
@@ -22,8 +23,8 @@ function Elexon({ dataGiven, graphId, datakeyOne, dataKeyOneX, datakeyTwo, }) {
               }}
             >
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey={datakeyOne} tick={{ fill: "#fff", fontWeight: "800" }} label={{ value: datakeyOne, position: "top", fill: "white" }} />
-              <YAxis tick={{ fill: "#fff", fontWeight: "800" }} />
+              <XAxis dataKey={datakeyOne} tick={{ fill: fontColor, fontWeight: "800" }} label={{ value: datakeyOne, position: "top", fill: fontColor }} />
+              <YAxis tick={{ fill: fontColor, fontWeight: "800" }} />
               <Tooltip />
               <Legend />
               {dataKeyOneX && <Line type="monotone" dataKey={dataKeyOneX} stroke="#82ca9d" activeDot={{ r: 8 }} />}
@@ -50,8 +51,8 @@ function Elexon({ dataGiven, graphId, datakeyOne, dataKeyOneX, datakeyTwo, }) {
               }}
             >
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey={datakeyOne} tick={{ fill: "#fff", fontWeight: "800" }} label={{ value: datakeyOne, position: "top", fill: "white" }} />
-              <YAxis tick={{ fill: "#fff", fontWeight: "800" }} />
+              <XAxis dataKey={datakeyOne} tick={{ fill: fontColor, fontWeight: "800" }} label={{ value: datakeyOne, position: "top", fill: fontColor }} />
+              <YAxis tick={{ fill: fontColor, fontWeight: "800" }} />
               <Tooltip />
               {dataKeyOneX && <Area type="monotone" stackId="1" dataKey={dataKeyOneX} stroke="#82ca9d" fill="#82ca9d" />}
               <Area type="monotone" dataKey={datakeyTwo} stackId="1" stroke="#8884d8" fill="#8884d8" />
@@ -78,8 +79,8 @@ function Elexon({ dataGiven, graphId, datakeyOne, dataKeyOneX, datakeyTwo, }) {
 
             >
               <CartesianGrid strokeDasharray="3 3" />
-              <XAxis name={datakeyOne} dataKey={datakeyOne} tick={{ fill: "#fff", fontWeight: "800" }} label={{ value: datakeyOne, position: "left", fill: "white" }} />
-              <YAxis tick={{ fill: "#fff", fontWeight: "800" }} />
+              <XAxis name={datakeyOne} dataKey={datakeyOne} tick={{ fill: fontColor, fontWeight: "800" }} label={{ value: datakeyOne, position: "left", fill: fontColor}} />
+              <YAxis tick={{ fill: fontColor, fontWeight: "800" }} />
               <Tooltip />
               <Legend />
               {dataKeyOneX && <Bar dataKey={dataKeyOneX} fill="#82ca9d" />}
@@ -95,8 +96,8 @@ function Elexon({ dataGiven, graphId, datakeyOne, dataKeyOneX, datakeyTwo, }) {
           <ResponsiveContainer width="99%" height="100%">
             <RadarChart cx="50%" cy="50%" outerRadius="80%" data={dataGiven}>
               <PolarGrid />
-              <PolarAngleAxis dataKey={datakeyOne} tick={{ fill: "#fff", fontWeight: "800", opacity: 0 }} />
-              <PolarRadiusAxis angle={30} domain={[0, 150]} tick={{ fill: "#fff", fontWeight: "800", opacity: 0 }} />
+              <PolarAngleAxis dataKey={datakeyOne} tick={{ fill: fontColor, fontWeight: "800", opacity: 0 }} />
+              <PolarRadiusAxis angle={30} domain={[0, 150]} tick={{ fill: fontColor, fontWeight: "800", opacity: 0 }} />
               <Radar name={datakeyTwo} dataKey={datakeyTwo} stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
               {dataKeyOneX && <Radar name={dataKeyOneX} dataKey={dataKeyOneX} fill="#82ca9d" fillOpacity={0.6} />}
               <Legend />

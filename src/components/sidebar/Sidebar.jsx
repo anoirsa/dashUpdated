@@ -23,7 +23,7 @@ const Sidebar = () => {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle"> QuicMenu</h3>
                         <div className="sidebarList">
-                            <Link className="sidebarListitem">
+                            <Link to="/users" className="sidebarListitem">
                                 <Person className="sidebarIcon" />
                                 Users
                             </Link>
