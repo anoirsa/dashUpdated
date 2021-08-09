@@ -1,22 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Redirect, Route, Switch } from 'react-router-dom';
 import './Login.css';
+import { checkLoginStatus, loginGo } from './LoginCheckUps';
 import MainDash from './MainDash';
 
 const Login = () => {
+  
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("")
-
-  const onSumbit  = () => {
-    
-    console.log("Executed")
-    if (username == "admin" && password =="123456") {
-        setIsLoggedIn(true);
+  const onSubmit = () => {
+    if (username  == "admin" &&  password == "123456") {
+      setIsLoggedIn(true);
     }
   }
  
-  console.log(username  +" and " + password)
+ 
   return !isLoggedIn ? (<div>
     <div class="body"></div>
     <div class="grad"></div>
@@ -25,19 +24,22 @@ const Login = () => {
     </div>
     <br></br>
 
-    <form class="login" >
+    <form class="login" onSubmit={onSubmit} >
       <input 
         type="text"
         placeholder="username"  
         name="username"
-        value={username}
-        onChange={e => setUsername(e.target.value)} /><br />
+        onChange={e => setUsername(e.target.value)}
+        
+         /><br />
       <input type="password"
              placeholder="password" 
              name="password"
-             value={password}
-             onChange = {e => setPassword(e.target.value)} /><br />
-      <button onClick={onSumbit} className="sumbit--button" >Login</button>
+             onChange={e => setPassword(e.target.value)}
+            
+            
+             /><br />
+      <button type="submit" className="sumbit--button" >Login</button>
     </form>
 
     

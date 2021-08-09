@@ -9,11 +9,11 @@ const Sidebar = () => {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle"> Dashboard</h3>
                         <div className="sidebarList">
-                            <Link className="sidebarListitem" to="/">
+                            <Link className="sidebarListitem" to="/dash">
                                 <LineStyle className="sidebarIcon" />
                                 Home
                             </Link>
-                            <Link className="sidebarListitem" to="/announcements">
+                            <Link className="sidebarListitem" to="/dash/announcements">
                                 <Announcement className="sidebarIcon" />
                                 Announcements
                             </Link>
@@ -23,15 +23,15 @@ const Sidebar = () => {
                 <div className="sidebarMenu">
                     <h3 className="sidebarTitle"> QuicMenu</h3>
                         <div className="sidebarList">
-                            <Link to="/users" className="sidebarListitem">
+                            <Link to="/dash/users" className="sidebarListitem">
                                 <Person className="sidebarIcon" />
                                 Users
                             </Link>
-                            <Link to="/ai_model" className="sidebarListitem">
+                            <Link to="/dash/ai_model" className="sidebarListitem">
                                 <Timeline className="sidebarIcon" />
                                 AI Model
                             </Link>
-                            <Link to="/bankenergi" className="sidebarListitem">
+                            <Link to="/dash/bankenergi" className="sidebarListitem">
                                 <Timeline className="sidebarIcon" />
                                 BankEnergi
                             </Link>
